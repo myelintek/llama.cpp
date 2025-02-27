@@ -1,0 +1,23 @@
+sudo docker run --name llama_cpp_Q4_K_M --rm             -v /home/mlsteam/.cache/llama.cpp/:/.cache/llama.cpp             ghcr.io/ggml-org/llama.cpp:full             --bench             -m /.cache/llama.cpp/DeepSeek-R1-1.5B_Q4_K_M.gguf             -p 512,1024             -n 128,256             -t 64,128             --delay 300             -r 50             --cpu-strict 0,1             --mmap 0
+load_backend: loaded CPU backend from ./libggml-cpu-icelake.so
+| model                          |       size |     params | backend    | threads | cpu_strict | mmap |          test |                  t/s |
+| ------------------------------ | ---------: | ---------: | ---------- | ------: | ---------: | ---: | ------------: | -------------------: |
+| qwen2 1.5B Q4_K - Medium       |   1.04 GiB |     1.78 B | CPU        |      64 |          0 |    0 |         pp512 |       952.96 ± 70.45 |
+| qwen2 1.5B Q4_K - Medium       |   1.04 GiB |     1.78 B | CPU        |      64 |          0 |    0 |        pp1024 |        982.13 ± 9.61 |
+| qwen2 1.5B Q4_K - Medium       |   1.04 GiB |     1.78 B | CPU        |      64 |          0 |    0 |         tg128 |        134.23 ± 2.82 |
+| qwen2 1.5B Q4_K - Medium       |   1.04 GiB |     1.78 B | CPU        |      64 |          0 |    0 |         tg256 |        137.19 ± 1.95 |
+| qwen2 1.5B Q4_K - Medium       |   1.04 GiB |     1.78 B | CPU        |      64 |          1 |    0 |         pp512 |      1009.53 ± 11.78 |
+| qwen2 1.5B Q4_K - Medium       |   1.04 GiB |     1.78 B | CPU        |      64 |          1 |    0 |        pp1024 |       1032.90 ± 5.74 |
+| qwen2 1.5B Q4_K - Medium       |   1.04 GiB |     1.78 B | CPU        |      64 |          1 |    0 |         tg128 |        139.84 ± 1.24 |
+| qwen2 1.5B Q4_K - Medium       |   1.04 GiB |     1.78 B | CPU        |      64 |          1 |    0 |         tg256 |        141.72 ± 0.95 |
+| qwen2 1.5B Q4_K - Medium       |   1.04 GiB |     1.78 B | CPU        |     128 |          0 |    0 |         pp512 |      543.79 ± 309.17 |
+| qwen2 1.5B Q4_K - Medium       |   1.04 GiB |     1.78 B | CPU        |     128 |          0 |    0 |        pp1024 |      732.32 ± 258.10 |
+| qwen2 1.5B Q4_K - Medium       |   1.04 GiB |     1.78 B | CPU        |     128 |          0 |    0 |         tg128 |        69.91 ± 32.20 |
+| qwen2 1.5B Q4_K - Medium       |   1.04 GiB |     1.78 B | CPU        |     128 |          0 |    0 |         tg256 |        62.84 ± 31.05 |
+| qwen2 1.5B Q4_K - Medium       |   1.04 GiB |     1.78 B | CPU        |     128 |          1 |    0 |         pp512 |      545.65 ± 303.16 |
+| qwen2 1.5B Q4_K - Medium       |   1.04 GiB |     1.78 B | CPU        |     128 |          1 |    0 |        pp1024 |      612.80 ± 277.21 |
+| qwen2 1.5B Q4_K - Medium       |   1.04 GiB |     1.78 B | CPU        |     128 |          1 |    0 |         tg128 |        90.10 ± 32.77 |
+| qwen2 1.5B Q4_K - Medium       |   1.04 GiB |     1.78 B | CPU        |     128 |          1 |    0 |         tg256 |        81.22 ± 28.19 |
+
+build: af7747c9 (4762)
+Error response from daemon: No such container: llama_cpp_Q4_K_M

@@ -1,0 +1,21 @@
+./build/bin/llama-bench -m ~/.cache/llama.cpp/DeepSeek-R1-1.5B_Q4_K_M.gguf             -p 512,1024             -n 128,256             -t 64,128             --delay 300             -r 50             --cpu-strict 0,1             --mmap 0
+| model                          |       size |     params | backend    | threads | cpu_strict | mmap |          test |                  t/s |
+| ------------------------------ | ---------: | ---------: | ---------- | ------: | ---------: | ---: | ------------: | -------------------: |
+| qwen2 1.5B Q4_K - Medium       |   1.04 GiB |     1.78 B | CPU        |      64 |          0 |    0 |         pp512 |       947.33 ± 67.83 |
+| qwen2 1.5B Q4_K - Medium       |   1.04 GiB |     1.78 B | CPU        |      64 |          0 |    0 |        pp1024 |        961.97 ± 8.00 |
+| qwen2 1.5B Q4_K - Medium       |   1.04 GiB |     1.78 B | CPU        |      64 |          0 |    0 |         tg128 |        126.02 ± 9.89 |
+| qwen2 1.5B Q4_K - Medium       |   1.04 GiB |     1.78 B | CPU        |      64 |          0 |    0 |         tg256 |        139.12 ± 1.10 |
+| qwen2 1.5B Q4_K - Medium       |   1.04 GiB |     1.78 B | CPU        |      64 |          1 |    0 |         pp512 |       973.04 ± 16.28 |
+| qwen2 1.5B Q4_K - Medium       |   1.04 GiB |     1.78 B | CPU        |      64 |          1 |    0 |        pp1024 |       971.98 ± 11.67 |
+| qwen2 1.5B Q4_K - Medium       |   1.04 GiB |     1.78 B | CPU        |      64 |          1 |    0 |         tg128 |        134.18 ± 1.09 |
+| qwen2 1.5B Q4_K - Medium       |   1.04 GiB |     1.78 B | CPU        |      64 |          1 |    0 |         tg256 |        138.77 ± 1.06 |
+| qwen2 1.5B Q4_K - Medium       |   1.04 GiB |     1.78 B | CPU        |     128 |          0 |    0 |         pp512 |      662.42 ± 281.25 |
+| qwen2 1.5B Q4_K - Medium       |   1.04 GiB |     1.78 B | CPU        |     128 |          0 |    0 |        pp1024 |      629.45 ± 239.62 |
+| qwen2 1.5B Q4_K - Medium       |   1.04 GiB |     1.78 B | CPU        |     128 |          0 |    0 |         tg128 |        89.08 ± 24.76 |
+| qwen2 1.5B Q4_K - Medium       |   1.04 GiB |     1.78 B | CPU        |     128 |          0 |    0 |         tg256 |        76.21 ± 26.81 |
+| qwen2 1.5B Q4_K - Medium       |   1.04 GiB |     1.78 B | CPU        |     128 |          1 |    0 |         pp512 |      630.35 ± 278.31 |
+| qwen2 1.5B Q4_K - Medium       |   1.04 GiB |     1.78 B | CPU        |     128 |          1 |    0 |        pp1024 |      525.63 ± 262.35 |
+| qwen2 1.5B Q4_K - Medium       |   1.04 GiB |     1.78 B | CPU        |     128 |          1 |    0 |         tg128 |        87.11 ± 28.38 |
+| qwen2 1.5B Q4_K - Medium       |   1.04 GiB |     1.78 B | CPU        |     128 |          1 |    0 |         tg256 |        70.44 ± 29.56 |
+
+build: 9626d935 (4741)

@@ -1,0 +1,17 @@
+./build/bin/llama-bench -m ~/.cache/llama.cpp/DeepSeek-R1-8B_Q8_0.gguf             -p 512,1024             -n 128,256             -t 64,128             --delay 0             -r 50             --cpu-strict 1             --mmap 0
+begin
+Thu Feb 27 02:00:05 AM UTC 2025
+| model                          |       size |     params | backend    | threads | cpu_strict | mmap |          test |                  t/s |
+| ------------------------------ | ---------: | ---------: | ---------- | ------: | ---------: | ---: | ------------: | -------------------: |
+| llama 8B Q8_0                  |   7.95 GiB |     8.03 B | CPU        |      64 |          1 |    0 |         pp512 |       357.12 ± 38.85 |
+| llama 8B Q8_0                  |   7.95 GiB |     8.03 B | CPU        |      64 |          1 |    0 |        pp1024 |       345.96 ± 32.54 |
+| llama 8B Q8_0                  |   7.95 GiB |     8.03 B | CPU        |      64 |          1 |    0 |         tg128 |         46.53 ± 2.05 |
+| llama 8B Q8_0                  |   7.95 GiB |     8.03 B | CPU        |      64 |          1 |    0 |         tg256 |         46.35 ± 2.10 |
+| llama 8B Q8_0                  |   7.95 GiB |     8.03 B | CPU        |     128 |          1 |    0 |         pp512 |       202.24 ± 91.49 |
+| llama 8B Q8_0                  |   7.95 GiB |     8.03 B | CPU        |     128 |          1 |    0 |        pp1024 |       197.82 ± 72.33 |
+| llama 8B Q8_0                  |   7.95 GiB |     8.03 B | CPU        |     128 |          1 |    0 |         tg128 |         27.93 ± 8.16 |
+| llama 8B Q8_0                  |   7.95 GiB |     8.03 B | CPU        |     128 |          1 |    0 |         tg256 |         21.98 ± 8.46 |
+
+build: 9626d935 (4741)
+Thu Feb 27 02:34:53 AM UTC 2025
+end

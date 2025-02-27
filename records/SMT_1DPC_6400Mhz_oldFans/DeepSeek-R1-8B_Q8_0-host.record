@@ -1,0 +1,25 @@
+./build/bin/llama-bench -m ~/.cache/llama.cpp/DeepSeek-R1-8B_Q8_0.gguf             -p 512,1024             -n 128,256             -t 64,128             --delay 300             -r 50             --cpu-strict 0,1             --mmap 0
+begin
+Tue Feb 25 08:16:26 AM UTC 2025
+| model                          |       size |     params | backend    | threads | cpu_strict | mmap |          test |                  t/s |
+| ------------------------------ | ---------: | ---------: | ---------- | ------: | ---------: | ---: | ------------: | -------------------: |
+| llama 8B Q8_0                  |   7.95 GiB |     8.03 B | CPU        |      64 |          0 |    0 |         pp512 |       344.96 ± 44.91 |
+| llama 8B Q8_0                  |   7.95 GiB |     8.03 B | CPU        |      64 |          0 |    0 |        pp1024 |       364.79 ± 17.19 |
+| llama 8B Q8_0                  |   7.95 GiB |     8.03 B | CPU        |      64 |          0 |    0 |         tg128 |         47.74 ± 0.63 |
+| llama 8B Q8_0                  |   7.95 GiB |     8.03 B | CPU        |      64 |          0 |    0 |         tg256 |         46.80 ± 2.28 |
+| llama 8B Q8_0                  |   7.95 GiB |     8.03 B | CPU        |      64 |          1 |    0 |         pp512 |       373.23 ± 17.04 |
+| llama 8B Q8_0                  |   7.95 GiB |     8.03 B | CPU        |      64 |          1 |    0 |        pp1024 |       363.96 ± 16.50 |
+| llama 8B Q8_0                  |   7.95 GiB |     8.03 B | CPU        |      64 |          1 |    0 |         tg128 |         47.26 ± 0.40 |
+| llama 8B Q8_0                  |   7.95 GiB |     8.03 B | CPU        |      64 |          1 |    0 |         tg256 |         46.01 ± 2.59 |
+| llama 8B Q8_0                  |   7.95 GiB |     8.03 B | CPU        |     128 |          0 |    0 |         pp512 |       210.39 ± 82.40 |
+| llama 8B Q8_0                  |   7.95 GiB |     8.03 B | CPU        |     128 |          0 |    0 |        pp1024 |       190.70 ± 66.77 |
+| llama 8B Q8_0                  |   7.95 GiB |     8.03 B | CPU        |     128 |          0 |    0 |         tg128 |         21.54 ± 7.87 |
+| llama 8B Q8_0                  |   7.95 GiB |     8.03 B | CPU        |     128 |          0 |    0 |         tg256 |         20.82 ± 5.69 |
+| llama 8B Q8_0                  |   7.95 GiB |     8.03 B | CPU        |     128 |          1 |    0 |         pp512 |       185.44 ± 80.30 |
+| llama 8B Q8_0                  |   7.95 GiB |     8.03 B | CPU        |     128 |          1 |    0 |        pp1024 |       179.48 ± 63.58 |
+| llama 8B Q8_0                  |   7.95 GiB |     8.03 B | CPU        |     128 |          1 |    0 |         tg128 |         22.41 ± 7.32 |
+| llama 8B Q8_0                  |   7.95 GiB |     8.03 B | CPU        |     128 |          1 |    0 |         tg256 |         16.72 ± 5.36 |
+
+build: 9626d935 (4741)
+Tue Feb 25 10:50:15 AM UTC 2025
+end

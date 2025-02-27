@@ -1,0 +1,17 @@
+./build/bin/llama-bench -m ~/.cache/llama.cpp/DeepSeek-R1-14B_Q8_0.gguf             -p 512,1024             -n 128,256             -t 64,128             --delay 0             -r 50             --cpu-strict 1             --mmap 0
+begin
+Thu Feb 27 02:34:53 AM UTC 2025
+| model                          |       size |     params | backend    | threads | cpu_strict | mmap |          test |                  t/s |
+| ------------------------------ | ---------: | ---------: | ---------- | ------: | ---------: | ---: | ------------: | -------------------: |
+| qwen2 14B Q8_0                 |  14.62 GiB |    14.77 B | CPU        |      64 |          1 |    0 |         pp512 |       190.67 ± 19.52 |
+| qwen2 14B Q8_0                 |  14.62 GiB |    14.77 B | CPU        |      64 |          1 |    0 |        pp1024 |       190.32 ± 14.50 |
+| qwen2 14B Q8_0                 |  14.62 GiB |    14.77 B | CPU        |      64 |          1 |    0 |         tg128 |         29.40 ± 0.68 |
+| qwen2 14B Q8_0                 |  14.62 GiB |    14.77 B | CPU        |      64 |          1 |    0 |         tg256 |         29.45 ± 1.37 |
+| qwen2 14B Q8_0                 |  14.62 GiB |    14.77 B | CPU        |     128 |          1 |    0 |         pp512 |        98.47 ± 40.19 |
+| qwen2 14B Q8_0                 |  14.62 GiB |    14.77 B | CPU        |     128 |          1 |    0 |        pp1024 |       119.23 ± 30.00 |
+| qwen2 14B Q8_0                 |  14.62 GiB |    14.77 B | CPU        |     128 |          1 |    0 |         tg128 |         13.59 ± 3.48 |
+| qwen2 14B Q8_0                 |  14.62 GiB |    14.77 B | CPU        |     128 |          1 |    0 |         tg256 |         10.93 ± 3.73 |
+
+build: 9626d935 (4741)
+Thu Feb 27 03:36:39 AM UTC 2025
+end

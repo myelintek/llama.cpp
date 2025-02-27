@@ -1,0 +1,15 @@
+./build/bin/llama-bench -m ~/DeepSeek-R1-GGUF/DeepSeek-R1-Q8_0/DeepSeek-R1.Q8_0-00001-of-00015.gguf             -p 512,1024             -n 128,256             -t 64,128             --delay 300             -r 50             --cpu-strict 0,1             --mmap 0
+| model                          |       size |     params | backend    | threads | cpu_strict | mmap |          test |                  t/s |
+| ------------------------------ | ---------: | ---------: | ---------- | ------: | ---------: | ---: | ------------: | -------------------: |
+| deepseek2 671B Q8_0            | 664.29 GiB |   671.03 B | CPU        |      64 |          0 |    0 |         pp512 |         33.47 ± 0.51 |
+| deepseek2 671B Q8_0            | 664.29 GiB |   671.03 B | CPU        |      64 |          0 |    0 |        pp1024 |         33.95 ± 0.44 |
+| deepseek2 671B Q8_0            | 664.29 GiB |   671.03 B | CPU        |      64 |          0 |    0 |         tg128 |          1.99 ± 0.02 |
+| deepseek2 671B Q8_0            | 664.29 GiB |   671.03 B | CPU        |      64 |          0 |    0 |         tg256 |          2.10 ± 0.06 |
+| deepseek2 671B Q8_0            | 664.29 GiB |   671.03 B | CPU        |      64 |          1 |    0 |         pp512 |         36.51 ± 2.27 |
+| deepseek2 671B Q8_0            | 664.29 GiB |   671.03 B | CPU        |      64 |          1 |    0 |        pp1024 |         40.31 ± 1.41 |
+| deepseek2 671B Q8_0            | 664.29 GiB |   671.03 B | CPU        |      64 |          1 |    0 |         tg128 |          3.48 ± 0.08 |
+| deepseek2 671B Q8_0            | 664.29 GiB |   671.03 B | CPU        |      64 |          1 |    0 |         tg256 |          4.09 ± 0.15 |
+| deepseek2 671B Q8_0            | 664.29 GiB |   671.03 B | CPU        |     128 |          0 |    0 |         pp512 |         30.49 ± 6.96 |
+| deepseek2 671B Q8_0            | 664.29 GiB |   671.03 B | CPU        |     128 |          0 |    0 |        pp1024 |         27.38 ± 4.46 |
+| deepseek2 671B Q8_0            | 664.29 GiB |   671.03 B | CPU        |     128 |          0 |    0 |         tg128 |          1.32 ± 0.47 |
+| deepseek2 671B Q8_0            | 664.29 GiB |   671.03 B | CPU        |     128 |          0 |    0 |         tg256 |          1.59 ± 0.36 |

@@ -1,0 +1,25 @@
+./build/bin/llama-bench -m ~/.cache/llama.cpp/Llama-3.2-3B-Instruct_Q8_0.gguf             -p 512,1024             -n 128,256             -t 64,128             --delay 300             -r 50             --cpu-strict 0,1             --mmap 0
+begin
+Tue Feb 25 04:08:34 PM UTC 2025
+| model                          |       size |     params | backend    | threads | cpu_strict | mmap |          test |                  t/s |
+| ------------------------------ | ---------: | ---------: | ---------- | ------: | ---------: | ---: | ------------: | -------------------: |
+| llama 3B Q8_0                  |   3.18 GiB |     3.21 B | CPU        |      64 |          0 |    0 |         pp512 |      712.28 ± 118.88 |
+| llama 3B Q8_0                  |   3.18 GiB |     3.21 B | CPU        |      64 |          0 |    0 |        pp1024 |       722.23 ± 39.80 |
+| llama 3B Q8_0                  |   3.18 GiB |     3.21 B | CPU        |      64 |          0 |    0 |         tg128 |         80.89 ± 2.04 |
+| llama 3B Q8_0                  |   3.18 GiB |     3.21 B | CPU        |      64 |          0 |    0 |         tg256 |         81.25 ± 0.60 |
+| llama 3B Q8_0                  |   3.18 GiB |     3.21 B | CPU        |      64 |          1 |    0 |         pp512 |        781.31 ± 5.93 |
+| llama 3B Q8_0                  |   3.18 GiB |     3.21 B | CPU        |      64 |          1 |    0 |        pp1024 |        749.64 ± 3.41 |
+| llama 3B Q8_0                  |   3.18 GiB |     3.21 B | CPU        |      64 |          1 |    0 |         tg128 |         81.49 ± 1.67 |
+| llama 3B Q8_0                  |   3.18 GiB |     3.21 B | CPU        |      64 |          1 |    0 |         tg256 |         81.22 ± 0.69 |
+| llama 3B Q8_0                  |   3.18 GiB |     3.21 B | CPU        |     128 |          0 |    0 |         pp512 |      613.20 ± 168.83 |
+| llama 3B Q8_0                  |   3.18 GiB |     3.21 B | CPU        |     128 |          0 |    0 |        pp1024 |      414.70 ± 181.61 |
+| llama 3B Q8_0                  |   3.18 GiB |     3.21 B | CPU        |     128 |          0 |    0 |         tg128 |        50.59 ± 16.37 |
+| llama 3B Q8_0                  |   3.18 GiB |     3.21 B | CPU        |     128 |          0 |    0 |         tg256 |        38.99 ± 13.64 |
+| llama 3B Q8_0                  |   3.18 GiB |     3.21 B | CPU        |     128 |          1 |    0 |         pp512 |      469.18 ± 213.91 |
+| llama 3B Q8_0                  |   3.18 GiB |     3.21 B | CPU        |     128 |          1 |    0 |        pp1024 |      451.57 ± 176.62 |
+| llama 3B Q8_0                  |   3.18 GiB |     3.21 B | CPU        |     128 |          1 |    0 |         tg128 |        42.88 ± 19.27 |
+| llama 3B Q8_0                  |   3.18 GiB |     3.21 B | CPU        |     128 |          1 |    0 |         tg256 |        39.44 ± 13.24 |
+
+build: 9626d935 (4741)
+Tue Feb 25 06:06:12 PM UTC 2025
+end

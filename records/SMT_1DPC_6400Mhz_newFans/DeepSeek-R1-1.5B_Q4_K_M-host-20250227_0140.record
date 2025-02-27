@@ -1,0 +1,17 @@
+./build/bin/llama-bench -m ~/.cache/llama.cpp/DeepSeek-R1-1.5B_Q4_K_M.gguf             -p 512,1024             -n 128,256             -t 64,128             --delay 0             -r 50             --cpu-strict 1             --mmap 0
+begin
+Thu Feb 27 01:40:34 AM UTC 2025
+| model                          |       size |     params | backend    | threads | cpu_strict | mmap |          test |                  t/s |
+| ------------------------------ | ---------: | ---------: | ---------- | ------: | ---------: | ---: | ------------: | -------------------: |
+| qwen2 1.5B Q4_K - Medium       |   1.04 GiB |     1.78 B | CPU        |      64 |          1 |    0 |         pp512 |      936.49 ± 117.83 |
+| qwen2 1.5B Q4_K - Medium       |   1.04 GiB |     1.78 B | CPU        |      64 |          1 |    0 |        pp1024 |       974.79 ± 24.99 |
+| qwen2 1.5B Q4_K - Medium       |   1.04 GiB |     1.78 B | CPU        |      64 |          1 |    0 |         tg128 |        137.44 ± 1.28 |
+| qwen2 1.5B Q4_K - Medium       |   1.04 GiB |     1.78 B | CPU        |      64 |          1 |    0 |         tg256 |        136.37 ± 3.04 |
+| qwen2 1.5B Q4_K - Medium       |   1.04 GiB |     1.78 B | CPU        |     128 |          1 |    0 |         pp512 |      666.07 ± 236.40 |
+| qwen2 1.5B Q4_K - Medium       |   1.04 GiB |     1.78 B | CPU        |     128 |          1 |    0 |        pp1024 |      740.38 ± 251.89 |
+| qwen2 1.5B Q4_K - Medium       |   1.04 GiB |     1.78 B | CPU        |     128 |          1 |    0 |         tg128 |        93.08 ± 20.71 |
+| qwen2 1.5B Q4_K - Medium       |   1.04 GiB |     1.78 B | CPU        |     128 |          1 |    0 |         tg256 |        97.14 ± 21.32 |
+
+build: 9626d935 (4741)
+Thu Feb 27 01:50:16 AM UTC 2025
+end
